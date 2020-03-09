@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+html {
+    background-image: url("img/tloKosmos.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    font-family: 'Merriweather', serif;
+    color: #8F8F8F;
+    font-size: 25px;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+.mobileImg {
+    width: 0vw;
+    height: 0vh;
+}
+
+
+#menuIcon {
+    height: 0vh;
+    width: 0vw;
+    visibility: hidden;
+}
+
+#welcome {
+    position: relative;
+    right: 1vw;
+    bottom: 1vh;
+    display: flex;
+    background-color: #071224;
+    height: 102vh;
+    width: 100vw;
+    border-bottom: 3px outset #8F8F8F;
+}
+
+.menu {
+    height: 100vh;
+    width: 60vw;
+    position: absolute;
+    right: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+
+.welcomeTitle {
+    text-align: center;
+    margin: -20px;
+}
+
+nav ol{
+    position: relative;
+    display: flex;
+    list-style: none;
+    padding-left: 0vw;
+}
+
+.button {
+    background-color: #122138;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 150px;
+    height: 50px;
+    margin: 1.3vw;
+    text-align: center;
+    border: 3px outset #8F8F8F;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button p {
+    font-size: 1em;
+    color: #8F8F8F;
+    margin: auto;
+}
+
+.standardImg {
+    height: 110vh;
+    width: auto;
+    position: relative;
+    left: -2vw;
+    top: -8vh;
+}
+
+#live, #books, #awards {
+    width: 65vw;
+    height: auto;
+    margin: auto;
+    position: relative;
+}
+
+.textSection{
+    margin: auto;
+    margin-top: 5vw;
+    width: 80vw;
+    height: auto;
+    background-color: #1221387a;
+    border: 2px inset #8F8F8F;
+    border-radius: 2vw;
+}
+
+.areaTitle {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+.miniTabela{
+    display: flex;
+    flex-direction: column;
+}
+
+.miniTabela p {
+    margin: 2px;
+    font-size: 0.8em;
+}
+
+.years {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+#awards .miniTabela{
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.shelf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    align-items: flex-start;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 31%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.cover {
+    border: 1px solid #8F8F8F;
+    margin: 20px 0 20px 0;
+}
+
+.cover img {
+    height: 250px;
+    width: 167px;
+}
+
+.title {
+    margin: 1px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.bookYear {
+    margin: 1px;
+    font-size: 0.4em;
+}
+
+.ratting {
+    margin: 1px;
+    font-size: 0.6em;
+}
+
+.more {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 5vh 0 10vh 0;
+}
+
+.more a{
+    text-decoration: underline;
+    color: #8F8F8F;
+}
+
+footer {
+    border-top: 1px inset #8F8F8F;
+    background-color: #020813;
+    position: relative;
+    top: 10vh;
+    height: auto;
+    width: 102vw;
+    right: 2vw;
+    
+}
+
+footer p {
+    color: rgba(143, 143, 143, 0.082);
+    font-size: 0.6em;
+    height: 40px;
+    position: relative;
+    right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1000px) {
+    .menu {
+        line-height: normal;
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .book {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 15px;
+    }
+
+    .menu {
+        width: 60vw;
+        height: 100vh;
+
+    }
+
+    i {
+        color: #8f8f8f;
+        font-size: 1.5em;
+    }
+
+    #menuIcon {
+        background-color: transparent;
+        position: absolute;
+        width: auto;
+        height: auto;
+        visibility: visible;
+        right: 0;
+        top: 10px;
+        border: none;
+    }
+
+    .siteMenu {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        right: -2vw;
+        width: 100vw;
+        background-color: #071224;
+        border-bottom: 3px outset #8f8f8f;
+        transform: translateY(-100%);
+        transition: 0.3s transform ease-in-out;
+    }
+
+    .welcomeTitle {
+        margin: 0px;
+        width: 60vw;
+        right: 0;
+    }
+
+    #menuIcon:focus ~ nav .siteMenu {
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #awards .miniTabela {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    html {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mobileImg {
+        width: 100vw;
+        height: auto;
+    }
+
+    .standardImg {
+        visibility: hidden;
+        width: 0px;
+    }
+
+    #welcome {
+        width: auto;
+        right: 0vw;
+        margin-bottom: 6vh;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .siteMenu {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        right: -2vw;
+        width: 100vw;
+        background-color: #071224;
+        border-bottom: 3px outset #8f8f8f;
+        transform: translateY(-100%);
+        transition: 0.3s transform ease-in-out;
+    }
+
+    nav ol{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .welcomeTitle {
+        width: 100vw;
+        margin: 0px;
+        position: relative;
+        left: 1vw;
+        bottom: 5vh;
+    }
+
+    .button {
+        margin: 2vw;
+        bottom: 0px;
+    }
+
+    .book {
+        width: 80%;
+    }
+
+    .menu h2 {
+        visibility: visible;
+    }
+
+    .menu h1 {
+        position: relative;
+        top: 0px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 50vh;
+        background-color: transparent;
+        width: auto;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        right: 0vw;
+    }
+}
