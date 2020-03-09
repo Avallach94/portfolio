@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/560710fdbd.js" crossorigin="anonymous"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Konrad w Tatrach</title>
+  </head>
+  <body>
+      <header>
+          <img src="img/bc59e619fbc7c8d6542c4b3ac3e39024.jpeg">
+          <div class="glass">
+              <div class="welcome">
+                <h1>Witaj</h1>
+                <h3>Poznaj moje dotychczasowe wyprawy.</h3>
+                <a href="#main" class='next'><i class="fas fa-chevron-down"></i></a>
+              </div>
+              <nav class="menu">
+                  <ul>
+                      <li><a href="#">Giewont</a></li>
+                      <li><a href="#">Gęsia Szyja</a></li>
+                      <li><a href="#">Kasprowy Wierch</a></li>
+                      <li><a href="#">Dolina Pięciu Stawów Polskich</a></li>
+                      <li><a href="#swinica">Świnica</a></li>
+                      <li><a href="#">Kościelec</a></li>
+                      <li><a href="#">Szpiglasowy Wierch</a></li>
+                      <li><a href="#">Grześ, Rakoń, Wołowiec</a></li>
+                  </ul>
+              </nav>
+          </div> 
+      </header>
+      <main>
+        <div id="main">
+            <img src="img/Dolina-Pięciu-Stawów-Polskich-shutterstock_475980547.jpg">
+            <img  id="swinica" src="img/00182ee2-40d4-4504-8820-12f851091f2d.jpg">
+            <img src="img/8d5e13bfa8c8987bb08f7130b565a0b5.jpeg">
+            <div class="contact">
+                <div class="contact-title">
+                    <p>Wspólna wyprawa?</p>
+                </div>
+                <form action="mailto:gacek.kon@gmail.com" method="POST" enctype="text/plain">
+                    <div>
+                        <p class="form-text">Chcesz wyruszyć ze mną w trase? Wystarczy że wyślesz formularz a ja skontaktuję się z tobą.</p>
+                        <p class="name">Imię:<input name="imie" type="name"></p>
+                        <p class="surname">Nazwisko:<input name="nazwisko"></p>
+                        <p class="age">Wiek:<input name="wiek"></p>
+                        <p class="destinity">Cel wyprawy:<input name="cel"></p>
+                        <p class="data">Termin:<input name="termin" type="date"></p>
+                        <p class="telephone">Telefon:<input name="telefon" type="tel"></p>
+                        <p class="email">E-mail:<input name="email" type="email"></p>
+                        <input name="send" type="submit" value="Wyślij">
+                    </div>
+                </form>
+            </div>
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+      <script src="script.js"></script>
+  </body>  
+</html>
