@@ -64,17 +64,24 @@ function prevPhoto() {
 function zoom() {
     if (isZoom == false) {
         document.querySelector('html').style.overflowY = 'hidden';
-        document.querySelector('body').style.visibility = 'hidden';
-        galleryContent.style.visibility = 'visible';
-        document.querySelector('body').style.backgroundColor = '#3D3D3D';
-        nextPht.style.color = 'white';
-        prevPht.style.color = 'white';
+        document.querySelector('header').style.visibility = 'hidden';
+        photoShadow.style.backgroundColor = 'rgba(61, 61, 61, 0.80)';
+        photoShadow.style.width = '110vw';
+        photoShadow.style.height = '130vh';
+        photoShadow.style.top = '-15vh';
+        photoShadow.style.left = '-20vw';
+        nextPht.style.color = '#C3C3C3';
+        prevPht.style.color = '#C3C3C3';
         document.querySelector('.chose-photo').style.width = '70vw';
         isZoom = true;
     } else {
+        document.querySelector('header').style.visibility = 'visible';
         document.querySelector('html').style.overflowY = 'scroll';
-        document.querySelector('body').style.visibility = 'visible';
-        document.querySelector('body').style.backgroundColor = 'white';
+        photoShadow.style.backgroundColor = '#3D3D3D';
+        photoShadow.style.width = '50vw';
+        photoShadow.style.height = '77vh';
+        photoShadow.style.top = '13.5vh';
+        photoShadow.style.left = '16.5vw';
         nextPht.style.color = '#3D3D3D';
         prevPht.style.color = '#3D3D3D';
         document.querySelector('.chose-photo').style.width = '50vw';
