@@ -17,8 +17,9 @@ let isZoom = false;
 let mobMenuOpn = false;
 let isMobile = false;
 
-if (document.querySelector('.mobile-contact').style.visibility = 'visible'){
+if (document.querySelector('.mobile-contact').style.visibility == 'visible'){
     isMobile = true
+    console.log('mobilny');
 }
 
 for (var i = 0; i < gallery.childNodes.length; i++){
@@ -76,11 +77,20 @@ function prevPhoto() {
             }
         }
     }
+    if (isMobile == false) {
+        if (isZoom == true) {
+            document.querySelector('.chose-photo').style.width = '70vw';
+        } else {
+            document.querySelector('.chose-photo').style.width = '50vw';
+        }
+    } else {
+        document.querySelector('.chose-photo').style.width = '85vw';
+    }
 }
 
 function zoom() {
     if (isMobile == true) {
-        return 
+        return  console.log('co jest');
     } else {
         if (isZoom == false) {
             html.style.overflowY = 'hidden';
@@ -118,10 +128,14 @@ function openMenu() {
 }
 
 function closeMenu() {
-    header.style.visibility = 'hidden';
-    header.style.zIndex = '-3';
-    html.style.overflowY = 'scroll';
-    mobMenuOpn = false;
+    if (isMobile == false) {
+        return
+    } else {
+        header.style.visibility = 'hidden';
+        header.style.zIndex = '-3';
+        tml.style.overflowY = 'scroll';
+        mobMenuOpn = false;
+    }
 }
 
 window.addEventListener('resize', resize);
