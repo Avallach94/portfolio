@@ -339,6 +339,7 @@ footer {
     overflow-x: hidden;
     position: relative;
     left: -1.6vw;
+    top: -1vh;
   }
 
   .content, .text-area {
@@ -353,8 +354,10 @@ footer {
     position: absolute;
     width: 105vw;
     height: 105vh;
+    left: 0;
     top: 0;
-    left: 110vw;
+    visibility: hidden;
+    z-index: -3;
     background-color: var(--main-grey);
   }
 
@@ -404,7 +407,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
     width: 100vw;
     background-color: var(--main-orange);
   }
@@ -417,7 +420,8 @@ footer {
 
   .welcome-text {
     position: relative;
-    height: 100vh;
+    bottom: 12vh;
+    height: 60vh;
     align-items: center;
     width: 80vw;
     right: 0;
@@ -446,9 +450,9 @@ footer {
     position: relative;
     bottom: 5vh;
     justify-content: space-between;
-    font-size: 3em;
+    font-size: 4em;
     height: auto;
-    width: 80vw;
+    width: 90vw;
     visibility: visible;
   }
   
@@ -457,9 +461,9 @@ footer {
     justify-content: flex-end;
     position: relative;
     font-size: 2em;
-    width: 80vw;
+    width: 90vw;
     height: auto;
-    top: 5vh;
+    bottom: 7vh;
     visibility: visible;
     z-index: 3;
   }
@@ -517,7 +521,7 @@ footer {
     align-items: center;
     height: 50vh;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2em;
     margin-top: -5vh;
   }
 
@@ -532,22 +536,22 @@ footer {
   }
 
   #next-photo, #prev-photo {
-    position: relative;
-    bottom: 0.9vh;
+    position: absolute;
+    bottom: 8.1vh;
     display: flex;
     align-items: center;
     height: 35vh;
-    width: 15vw;
+    width: 17vw;
     color: var(--secound-grey);
-    background-color: rgba(61, 61, 61, 0.80);
+    background-color: rgba(61, 61, 61, 0.30);
   }
 
   #next-photo {
-    right: 7.9vw;
+    right: 7.6vw;
   }
 
   #prev-photo {
-    left: 7.9vw;
+    left: 7.6vw;
   }
 
   #gallery i {
@@ -601,4 +605,5 @@ footer {
     margin-top: 6vh;    
     left: 0;
   }
+
 }
