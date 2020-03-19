@@ -114,6 +114,18 @@ nav li {
   height: 0;
 }
 
+.mobile-contact {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.mobile-menu {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
 h3 {
   font-weight: normal;
   margin: 0;
@@ -324,19 +336,25 @@ footer {
 @media only screen and (max-width: 500px){
   html {
     font-size: 15px;
-    overflow-x: scroll;
+    overflow-x: hidden;
     position: relative;
-    left: -1.5vw;
+    left: -1.6vw;
   }
+
+  .content, .text-area {
+    width: 100vw;
+    left: 0;
+  }
+
 
   header {
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 105vw;
+    height: 105vh;
     top: 0;
-    left: 100vw;
+    left: 110vw;
     background-color: var(--main-grey);
   }
 
@@ -384,27 +402,22 @@ footer {
 
   #welcome-section {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     background-color: var(--main-orange);
   }
 
-  .welcome-img {
+  .welcome-img, .welcome-decoration {
     height: 0;
     width: 0;
-    visibility: hidden;
-  }
-
-  .welcome-decoration {
-    width: 0;
-    height: 0;
     visibility: hidden;
   }
 
   .welcome-text {
     position: relative;
-    height: 60vh;
+    height: 100vh;
     align-items: center;
     width: 80vw;
     right: 0;
@@ -418,13 +431,174 @@ footer {
   .welcome-text .title {
     font-weight: 600;
     font-size: 6em;
-    margin: -4.5vh 0 2vh 0;
+    margin: -5vh 0 -2vh 0;
   }
 
   h3 {
     text-align: center;
-    width: 60vw;
+    width: 80vw;
     left: 0;
-    font-size: 1.4em;
+    font-size: 1.2em;
+  }
+
+  .mobile-contact {
+    display: flex;
+    position: relative;
+    bottom: 5vh;
+    justify-content: space-between;
+    font-size: 3em;
+    height: auto;
+    width: 80vw;
+    visibility: visible;
+  }
+  
+  .mobile-menu {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    font-size: 2em;
+    width: 80vw;
+    height: auto;
+    top: 5vh;
+    visibility: visible;
+    z-index: 3;
+  }
+
+  .text-area {
+    text-align: center;
+  }
+
+  .list-with-photo {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  
+  #offer ul {
+    width: 70vw;
+    position: relative;
+    left: 10vw;
+    text-align: left;
+  }
+  
+  .list-with-photo .photo, .offer-photo img, .offer-img-shadow {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  #offer p {
+    margin: 2vh;
+  }
+
+  .triangle-offer{
+    top: 91.5vh;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border-style: solid;
+    border-width: 57vh 0 0 100vw;
+    border-color: transparent transparent transparent var(--secound-grey);
+  }
+
+  .gallery-img-shadow {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .chose-photo {
+    width: 85vw;
+    height: 35vh;
+  }
+
+  #gallery .content {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    justify-content: center;
+    font-size: 3em;
+    margin-top: -5vh;
+  }
+
+  .triangle-gallery {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border-style: solid;
+    border-width: 0 100vw 57vh 0;
+    border-color: transparent var(--main-orange) transparent transparent;
+  }
+
+  #next-photo, #prev-photo {
+    position: relative;
+    bottom: 0.9vh;
+    display: flex;
+    align-items: center;
+    height: 35vh;
+    width: 15vw;
+    color: var(--secound-grey);
+    background-color: rgba(61, 61, 61, 0.80);
+  }
+
+  #next-photo {
+    right: 7.9vw;
+  }
+
+  #prev-photo {
+    left: 7.9vw;
+  }
+
+  #gallery i {
+    margin: auto
+  }
+
+  #contact {
+    height: auto;
+  }
+
+  .contact-with-form {
+    flex-direction: column;
+  }
+
+  .call-to-me {
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    margin: 5vh 0;
+  }
+
+  .call-to-me a {
+    margin: 1.5vh;
+  }
+
+  form {
+    width: 80vw;
+    margin-left: 0;
+  }
+
+  form input, textarea {
+    width: 70vw;
+  }
+
+  .btn {
+    width: 40vw;
+  }
+
+  .triangle-contact{
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -2;
+    border-style: solid;
+    border-width: 100vh 100vw 0 0;
+    border-color: var(--secound-grey) transparent transparent transparent;
+  }
+
+  footer {
+    width: 100vw;
+    margin-top: 6vh;    
+    left: 0;
   }
 }
