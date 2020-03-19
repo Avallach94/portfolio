@@ -15,11 +15,10 @@ let navBtn = document.querySelectorAll('header a');
 let allPhoto = []
 let isZoom = false;
 let mobMenuOpn = false;
-let isMobile = false;
+let isMobile = false; 
 
-if (document.querySelector('.mobile-contact').style.visibility == 'visible'){
-    isMobile = true
-    console.log('mobilny');
+if (window.innerWidth <= '500'){
+    isMobile = true 
 }
 
 for (var i = 0; i < gallery.childNodes.length; i++){
