@@ -16,8 +16,11 @@ let allPhoto = []
 let isZoom = false;
 let mobMenuOpn = false;
 let isMobile = false; 
+let isHorizontal = false;
 
-console.log(window.innerWidth);
+if (window.innerHeight <= '400'){
+    isHorizontal = true;
+}
 
 if (window.innerWidth <= '500'){
     isMobile = true;
@@ -97,10 +100,10 @@ function zoom() {
             html.style.overflowY = 'hidden';
             header.style.visibility = 'hidden';
             photoShadow.style.backgroundColor = 'rgba(61, 61, 61, 0.80)';
-            photoShadow.style.width = '110vw';
-            photoShadow.style.height = '130vh';
-            photoShadow.style.top = '-15vh';
-            photoShadow.style.left = '-20vw';
+            photoShadow.style.width = '130vw';
+            photoShadow.style.height = '150vh';
+            photoShadow.style.top = '-25vh';
+            photoShadow.style.left = '-30vw';
             nextPht.style.color = '#C3C3C3';
             prevPht.style.color = '#C3C3C3';
             document.querySelector('.chose-photo').style.width = '70vw';
@@ -110,7 +113,11 @@ function zoom() {
             html.style.overflowY = 'scroll';
             photoShadow.style.backgroundColor = '#3D3D3D';
             photoShadow.style.width = '50vw';
-            photoShadow.style.height = '77vh';
+            if (isHorizontal == true) {
+                photoShadow.style.height = '67vh';
+            } else {
+                photoShadow.style.height = '77vh';
+            }
             photoShadow.style.top = '13.5vh';
             photoShadow.style.left = '16.5vw';
             nextPht.style.color = '#3D3D3D';
@@ -129,7 +136,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-    if (isMobile == false) {
+    if (isMobile == false && isHorizontal == false)  {
     } else {
         header.style.visibility = 'hidden';
         header.style.zIndex = '-3';
