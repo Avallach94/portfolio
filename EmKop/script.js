@@ -33,15 +33,24 @@ for (var i = 0; i < gallery.childNodes.length; i++){
 }
 
 function resize(){
-    if (isMobile == true) {
-        return
-    }
     let offerHeight = document.querySelector('#offer').offsetHeight;
     let galleryHeight = document.querySelector('#gallery').offsetHeight;
     let contactHeight = document.querySelector('#contact').offsetHeight;
-    triangleOffer.style.borderWidth = `${offerHeight + 25}px 0 0 86vw`;
-    triangleGallery.style.borderWidth = `0 86vw ${galleryHeight}px 0`;
-    triangleContact.style.borderWidth = `${contactHeight}px 86vw 0 0`;
+    if (isMobile == true) {
+        triangleOffer.style.top = `${(offerHeight / 3) * 2}px`
+        triangleOffer.style.borderWidth = `${offerHeight / 3 + 30}px 0 0 100vw`;
+        triangleGallery.style.borderWidth = `0 100vw ${galleryHeight}px 0`;
+        triangleContact.style.borderWidth = `${contactHeight + 40}px 100vw 0 0`;
+    } else if (isHorizontal == true){
+        triangleOffer.style.top = `${(offerHeight / 3) * 2}px`
+        triangleOffer.style.borderWidth = `${offerHeight / 3 + 15}px 0 0 86vw`;
+        triangleGallery.style.borderWidth = `0 86vw ${galleryHeight}px 0`;
+        triangleContact.style.borderWidth = `${contactHeight + 20}px 86vw 0 0`;
+    } else {
+        triangleOffer.style.borderWidth = `${offerHeight + 25}px 0 0 86vw`;
+        triangleGallery.style.borderWidth = `0 86vw ${galleryHeight}px 0`;
+        triangleContact.style.borderWidth = `${contactHeight}px 86vw 0 0`;
+    }
 }
 
 function nextPhoto() {
@@ -93,8 +102,8 @@ function prevPhoto() {
 }
 
 function zoom() {
-    if (isMobile == true) {
-        return  console.log('co jest');
+    if (isMobile == true || isHorizontal == true) {
+        return  
     } else {
         if (isZoom == false) {
             html.style.overflowY = 'hidden';
@@ -113,11 +122,6 @@ function zoom() {
             html.style.overflowY = 'scroll';
             photoShadow.style.backgroundColor = '#3D3D3D';
             photoShadow.style.width = '50vw';
-            if (isHorizontal == true) {
-                photoShadow.style.height = '67vh';
-            } else {
-                photoShadow.style.height = '77vh';
-            }
             photoShadow.style.top = '13.5vh';
             photoShadow.style.left = '16.5vw';
             nextPht.style.color = '#3D3D3D';
@@ -145,6 +149,11 @@ function closeMenu() {
     }
 }
 
+function reload() {
+    location.reload();
+ }
+
+resize();
 window.addEventListener('resize', resize);
 nextPht.addEventListener('click', nextPhoto);
 prevPht.addEventListener('click', prevPhoto);
@@ -153,3 +162,4 @@ mobileMenu.addEventListener('click', openMenu);
 for (i = 0; i < navBtn.length; i++) {
     navBtn[i].addEventListener('click', closeMenu);
 }
+window.addEventListener("orientationchange", reload);

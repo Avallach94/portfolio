@@ -352,7 +352,7 @@ footer {
     background-color: var(--main-orange);
   }
 
-  .welcome-img, .list-with-photo .photo, .offer-photo img, .offer-img-shadow, .welcome-decoration, .logo img, .logo-decoration {
+  .gallery-img-shadow, .welcome-img, .list-with-photo .photo, .offer-photo img, .offer-img-shadow, .welcome-decoration, .logo img, .logo-decoration {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -478,11 +478,36 @@ footer {
   #gallery .content {
     margin-top: -12vh;
     height: 92vh;
+    font-size: 3em;
   }
 
-  .gallery-img-shadow {
-    width: 50vw;
-    height: 67vh;
+  .chose-photo {
+    height: 70vh;
+    box-shadow: 5px 5px 10px 0 #3D3D3D;
+  }
+
+  #next-photo, #prev-photo {
+    position: absolute;
+    bottom: 12.8vh;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    width: 10vw;
+    color: var(--secound-grey);
+    background-color: rgba(61, 61, 61, 0.30);
+  }
+
+  #next-photo {
+    right: 15vw;
+  }
+
+  #prev-photo {
+    left: 15vw;
+  }
+
+  #gallery i {
+    margin: auto
   }
 
   #contact {
@@ -536,12 +561,6 @@ footer {
 }
 
 @media only screen and (max-width: 500px){
-
-  .gallery-img-shadow {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-  }
 
   .content, .text-area {
     width: 100vw;
@@ -613,7 +632,6 @@ footer {
     height: 37vh;
     position: relative;
     top: -4vh;
-    box-shadow: 5px 5px 10px 0 #3D3D3D;
   }
 
   #gallery .content {
@@ -627,15 +645,9 @@ footer {
   }
 
   #next-photo, #prev-photo {
-    position: absolute;
     bottom: 8.6vh;
-    z-index: 3;
-    display: flex;
-    align-items: center;
     height: 37vh;
     width: 18vw;
-    color: var(--secound-grey);
-    background-color: rgba(61, 61, 61, 0.30);
   }
 
   #next-photo {
@@ -644,10 +656,6 @@ footer {
 
   #prev-photo {
     left: 5vw;
-  }
-
-  #gallery i {
-    margin: auto
   }
   
   .contact-with-form {
