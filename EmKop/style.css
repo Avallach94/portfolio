@@ -352,9 +352,9 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    width: 105vw;
+    width: 100vw;
     height: 105vh;
-    left: 0;
+    left: 2vw;
     top: 0;
     visibility: hidden;
     z-index: -3;
@@ -468,8 +468,20 @@ footer {
     z-index: 3;
   }
 
-  .text-area {
+  .text-area .title {
     text-align: center;
+    padding: 3vh 0;
+  }
+
+  #offer {
+    margin-bottom: 5vh;
+  }
+
+  #offer p {
+    position: relative;
+    width: 90vw;
+    left: 10vw;
+    margin: 0;
   }
 
   .list-with-photo {
@@ -478,6 +490,7 @@ footer {
   }
   
   #offer ul {
+    margin: 3vh 0;
     width: 70vw;
     position: relative;
     left: 10vw;
@@ -489,10 +502,6 @@ footer {
     height: 0;
     visibility: hidden;
   }
-  
-  #offer p {
-    margin: 2vh;
-  }
 
   .triangle-offer{
     top: 91.5vh;
@@ -501,7 +510,7 @@ footer {
     height: 0;
     z-index: -1;
     border-style: solid;
-    border-width: 57vh 0 0 100vw;
+    border-width: 67vh 0 0 100vw;
     border-color: transparent transparent transparent var(--secound-grey);
   }
 
@@ -512,17 +521,19 @@ footer {
   }
 
   .chose-photo {
-    width: 85vw;
-    height: 35vh;
+    width: 90vw;
+    height: 37vh;
+    position: relative;
+    top: -4vh;
   }
 
   #gallery .content {
     display: flex;
     align-items: center;
-    height: 50vh;
+    height: 45vh;
     justify-content: center;
     font-size: 2em;
-    margin-top: -5vh;
+    margin-top: 0;
   }
 
   .triangle-gallery {
@@ -531,27 +542,28 @@ footer {
     height: 0;
     z-index: -1;
     border-style: solid;
-    border-width: 0 100vw 57vh 0;
+    border-width: 0 100vw 63vh 0;
     border-color: transparent var(--main-orange) transparent transparent;
   }
 
   #next-photo, #prev-photo {
     position: absolute;
-    bottom: 8.1vh;
+    bottom: 8.6vh;
+    z-index: 3;
     display: flex;
     align-items: center;
-    height: 35vh;
-    width: 17vw;
+    height: 37vh;
+    width: 18vw;
     color: var(--secound-grey);
     background-color: rgba(61, 61, 61, 0.30);
   }
 
   #next-photo {
-    right: 7.6vw;
+    right: 5vw;
   }
 
   #prev-photo {
-    left: 7.6vw;
+    left: 5vw;
   }
 
   #gallery i {
@@ -570,7 +582,6 @@ footer {
     width: 100vw;
     height: auto;
     align-items: center;
-    margin: 5vh 0;
   }
 
   .call-to-me a {
@@ -578,16 +589,21 @@ footer {
   }
 
   form {
-    width: 80vw;
-    margin-left: 0;
+    width: 90vw;
+    margin: 5vh;
+    height: 50vh;
   }
 
   form input, textarea {
-    width: 70vw;
+    width: 80vw;
+  }
+
+  textarea {
+    height: 20vh;
   }
 
   .btn {
-    width: 40vw;
+    width: 50vw;
   }
 
   .triangle-contact{
@@ -596,7 +612,7 @@ footer {
     height: 0;
     z-index: -2;
     border-style: solid;
-    border-width: 100vh 100vw 0 0;
+    border-width: 106vh 100vw 0 0;
     border-color: var(--secound-grey) transparent transparent transparent;
   }
 

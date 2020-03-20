@@ -17,8 +17,10 @@ let isZoom = false;
 let mobMenuOpn = false;
 let isMobile = false; 
 
+console.log(window.innerWidth);
+
 if (window.innerWidth <= '500'){
-    isMobile = true 
+    isMobile = true;
 }
 
 for (var i = 0; i < gallery.childNodes.length; i++){
@@ -128,11 +130,10 @@ function openMenu() {
 
 function closeMenu() {
     if (isMobile == false) {
-        return
     } else {
         header.style.visibility = 'hidden';
         header.style.zIndex = '-3';
-        tml.style.overflowY = 'scroll';
+        html.style.overflowY = 'scroll';
         mobMenuOpn = false;
     }
 }
