@@ -60,7 +60,7 @@ function nextPhoto() {
                 document.querySelector('.chose-photo').style.width = '50vw';
             }
         } else {
-            document.querySelector('.chose-photo').style.width = '85vw';
+            document.querySelector('.chose-photo').style.width = '90vw';
         }
     }
 }
@@ -85,7 +85,7 @@ function prevPhoto() {
             document.querySelector('.chose-photo').style.width = '50vw';
         }
     } else {
-        document.querySelector('.chose-photo').style.width = '85vw';
+        document.querySelector('.chose-photo').style.width = '90vw';
     }
 }
 
