@@ -480,7 +480,7 @@ footer {
   #offer p {
     position: relative;
     width: 90vw;
-    left: 10vw;
+    left: 5vw;
     margin: 0;
   }
 
@@ -493,7 +493,7 @@ footer {
     margin: 3vh 0;
     width: 70vw;
     position: relative;
-    left: 10vw;
+    left: 5vw;
     text-align: left;
   }
   
@@ -510,7 +510,7 @@ footer {
     height: 0;
     z-index: -1;
     border-style: solid;
-    border-width: 67vh 0 0 100vw;
+    border-width: 62vh 0 0 100vw;
     border-color: transparent transparent transparent var(--secound-grey);
   }
 
@@ -589,13 +589,13 @@ footer {
   }
 
   form {
-    width: 90vw;
-    margin: 5vh;
+    width: 80vw;
+    margin: 5vh 10vw;
     height: 50vh;
   }
 
   form input, textarea {
-    width: 80vw;
+    width: 70vw;
   }
 
   textarea {
@@ -603,7 +603,7 @@ footer {
   }
 
   .btn {
-    width: 50vw;
+    width: 40vw;
   }
 
   .triangle-contact{
