@@ -30,7 +30,7 @@ header {
   top: 3vh;
   background-color: white;
   box-shadow: 5px 5px 10px 0 #3D3D3D;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo a{
@@ -329,8 +329,99 @@ footer {
 
 @media only screen and (max-width: 1000px) {
   .contact-with-form {
-      justify-content: space-around;
+    justify-content: space-around;
   }
+
+  .gallery-img-shadow, .offer-photo img, .offer-img-shadow {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  header {
+    width: 95vw;
+    left: 2vw;
+  }
+
+  .list-with-photo {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  
+  #offer ul {
+    margin: 3vh 0;
+    width: 70vw;
+    text-align: left;
+  }
+
+  .chose-photo {
+    width: 75vw;
+    height: 70vh;
+    box-shadow: 5px 5px 10px 0 #3D3D3D;
+  }
+
+  #next-photo, #prev-photo {
+    position: absolute;
+    bottom: 16.4vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    width: 10vw;
+    color: var(--secound-grey);
+    background-color: rgba(61, 61, 61, 0.30);
+  }
+
+  #next-photo {
+    right: 2.5vw;
+  }
+
+  #prev-photo {
+    left: 2.5vw;
+  }
+
+  #gallery i {
+    margin: auto
+  }
+
+  #contact {
+    height: auto;
+  }
+
+  .contact-with-form {
+    flex-direction: column;
+  }
+
+  .call-to-me {
+    height: auto;
+    align-items: center;
+  }
+
+  .call-to-me a {
+    margin: 1.5vh;
+  }
+
+  form {
+    width: 50vw;
+    margin: 10vh;
+    height: 86vh;
+  }
+
+  form input, textarea {
+    width: 45vw;
+    height: 12vh;
+    text-align: center;
+  }
+
+  textarea {
+    height: 35vh;
+  }
+
+  .btn {
+    height: 12vh;
+    width: 20vw;
+  }
+
 }
 
 @media only screen and (max-width: 700px){
@@ -352,7 +443,7 @@ footer {
     background-color: var(--main-orange);
   }
 
-  .gallery-img-shadow, .welcome-img, .list-with-photo .photo, .offer-photo img, .offer-img-shadow, .welcome-decoration, .logo img, .logo-decoration {
+  .welcome-img, .list-with-photo .photo, .welcome-decoration, .logo img, .logo-decoration {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -383,7 +474,7 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    width: 100vw;
+    width: 103vw;
     height: 98vh;
     left: -1.6vw;
     top: -1vh;
@@ -401,7 +492,7 @@ footer {
 
   h4 {
     position: relative;
-    top: 18vh;
+    top: 17vh;
     font-weight: 600;
     font-size: 2.5em;
   }
@@ -410,7 +501,7 @@ footer {
     align-items: center;
     padding: 0;
     right: 0;
-    top: -15vh;
+    top: -10vh;
   }
 
   nav a {
@@ -460,21 +551,6 @@ footer {
     margin: 0;
   }
 
-  .list-with-photo {
-    flex-direction: column;
-    align-items: baseline;
-  }
-  
-  #offer ul {
-    margin: 3vh 0;
-    width: 70vw;
-    text-align: left;
-  }
-  
-  .triangle-offer{
-    border-width: 185vh 0 0 86vw;
-  }
-
   #gallery .content {
     margin-top: -12vh;
     height: 92vh;
@@ -482,20 +558,12 @@ footer {
   }
 
   .chose-photo {
+    width: 50vw;
     height: 70vh;
-    box-shadow: 5px 5px 10px 0 #3D3D3D;
   }
 
   #next-photo, #prev-photo {
-    position: absolute;
     bottom: 12.8vh;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    height: 70vh;
-    width: 10vw;
-    color: var(--secound-grey);
-    background-color: rgba(61, 61, 61, 0.30);
   }
 
   #next-photo {
@@ -504,52 +572,6 @@ footer {
 
   #prev-photo {
     left: 15vw;
-  }
-
-  #gallery i {
-    margin: auto
-  }
-
-  #contact {
-    height: auto;
-  }
-
-  .contact-with-form {
-    flex-direction: column;
-  }
-
-  .call-to-me {
-    height: auto;
-    align-items: center;
-  }
-
-  .call-to-me a {
-    margin: 1.5vh;
-  }
-
-  form {
-    width: 50vw;
-    margin: 10vh;
-    height: 86vh;
-  }
-
-  form input, textarea {
-    width: 45vw;
-    height: 12vh;
-    text-align: center;
-  }
-
-  textarea {
-    height: 35vh;
-  }
-
-  .btn {
-    height: 12vh;
-    width: 20vw;
-  }
-
-  .triangle-contact{
-    border-width: 172vh 86vw 0 0;
   }
 
   footer {
@@ -568,6 +590,7 @@ footer {
   }
 
   header {
+    width: 101vw;
     height: 110vh;
     left: 2vw;
     top: 0;
@@ -622,11 +645,6 @@ footer {
     left: 6vw;
   }
 
-  .triangle-offer{
-    top: 91.5vh;
-    border-width: 62vh 0 0 100vw;
-  }
-
   .chose-photo {
     width: 90vw;
     height: 37vh;
@@ -638,10 +656,6 @@ footer {
     height: 45vh;
     font-size: 2em;
     margin-top: 0;
-  }
-
-  .triangle-gallery {
-    border-width: 0 100vw 63vh 0;
   }
 
   #next-photo, #prev-photo {
@@ -684,9 +698,5 @@ footer {
   .btn {
     height: 6vh;
     width: 40vw;
-  }
-
-  .triangle-contact{
-    border-width: 106vh 100vw 0 0;
   }
 }

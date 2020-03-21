@@ -17,6 +17,8 @@ let isZoom = false;
 let mobMenuOpn = false;
 let isMobile = false; 
 let isHorizontal = false;
+let isTablet = false;
+
 
 if (window.innerHeight <= '400'){
     isHorizontal = true;
@@ -24,6 +26,10 @@ if (window.innerHeight <= '400'){
 
 if (window.innerWidth <= '500'){
     isMobile = true;
+}
+
+if (window.innerWidth <= '1000' && window.innerWidth >= '700') {
+    isTablet = true;
 }
 
 for (var i = 0; i < gallery.childNodes.length; i++){
@@ -66,7 +72,9 @@ function nextPhoto() {
             }
         }
         if (isMobile == false) {
-            if (isZoom == true) {
+            if (isTablet == true) {
+                document.querySelector('.chose-photo').style.width = '75vw';
+            } else if (isZoom == true) {
                 document.querySelector('.chose-photo').style.width = '70vw';
             } else {
                 document.querySelector('.chose-photo').style.width = '50vw';
@@ -102,7 +110,7 @@ function prevPhoto() {
 }
 
 function zoom() {
-    if (isMobile == true || isHorizontal == true) {
+    if (isMobile == true || isHorizontal == true || isTablet == true) {
         return  
     } else {
         if (isZoom == false) {
@@ -122,6 +130,7 @@ function zoom() {
             html.style.overflowY = 'scroll';
             photoShadow.style.backgroundColor = '#3D3D3D';
             photoShadow.style.width = '50vw';
+            photoShadow.style.height = '77vh';
             photoShadow.style.top = '13.5vh';
             photoShadow.style.left = '16.5vw';
             nextPht.style.color = '#3D3D3D';
