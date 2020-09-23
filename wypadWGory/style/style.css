@@ -1,0 +1,299 @@
+:root {
+    --main-orange-color: #D55C1C;
+    --main-blue-color: #3C7EC7;
+    --main-green-color: #40B501;
+}
+
+.title-font {
+    font-family: 'Slabo 27px', serif;
+}
+
+body {
+    background: url("../images/bgc.jpg") repeat-x fixed;
+    background-size: cover;
+}
+
+.con {
+    background-color: rgba(230, 230, 230, 0.70);
+}
+
+.form-control {
+    background-color: #f8f9fa;
+}
+
+#list .form-control {
+    border: 1px solid var(--main-orange-color);
+}
+
+hr {
+    height: 2px;
+    width: 100%;
+    background-color: grey;
+    margin: auto;
+}
+
+#mobile-subs {
+    visibility: hidden;
+    height: 0;
+}
+
+#mobile-subs a{
+    color: var(--main-orange-color);
+    font-size: 1.1em;
+}
+
+header .bor-right {
+    border-right: 1px solid grey;
+}
+
+header .bor-left {
+    border-left: 2px solid grey;
+}
+
+.glass {
+    background-color: rgba(255, 255, 255, 0.774);
+    height: 16%;
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+#post .card, #jurnal-card, #contact .card {
+    border-color: var(--main-orange-color);
+}
+
+#more button{
+    background-color: var(--main-orange-color);
+}
+
+#jurnal .hero-img {
+    background: url("../images/jurnal.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+#post button, #list form button, #contact button {
+    color: var(--main-orange-color);
+    border: 1px solid var(--main-orange-color);
+    background-color: #f8f9fa;
+}
+
+#post button:hover, #list form button:hover, #contact button:hover{
+    color: white;
+    background-color: var(--main-orange-color);
+}
+
+#contact button {
+    width: 45%;
+}
+
+.cardHeight {
+    height: 250px;
+}
+
+.jurnal-card-img{
+    position: relative;
+    bottom: 20px;
+}
+
+#jurnal-card .card-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.shd {
+    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.75);
+}
+
+#jurnal-card .rounded {
+    border-radius: 15px!important;
+}
+
+#compendium {
+    background: url("../images/compendium.jpg");
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+#compendium button {
+    background-color: var(--main-green-color);
+}
+
+#compendium .jumbotron {
+    margin-bottom: 10px;
+}
+
+#compendium .glass {
+    height: 30%;
+    flex-direction: column;
+}
+
+.list-group-item {
+    border: 2px solid grey;
+    background-color: transparent;
+}
+
+.reached {
+    background-color: var(--main-green-color);
+    color: white;
+}
+
+header .container {
+    padding: 0;
+}
+
+footer .container{
+    background-color: rgba(59, 59, 59, 0.89);
+}
+
+footer img {
+    width: 100px;
+}
+
+footer p {
+    font-size: 10px;
+    color: black
+}
+
+#contact .row {
+    height: inherit;
+}
+
+@media (min-width: 1200px) {
+    
+    .logo {
+        height: 80px;
+    }
+
+    .col {
+        height: 90px;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    nav li {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    hr {
+        width: 75%;
+    }
+
+    #jurnal .hero-img {
+        height: 30rem;
+        background-position: top;
+    }
+
+    #list li {
+        width: 60%;
+    }
+
+    #list {
+        height: 100%;
+    }
+
+    #contact {
+        height: 90vh;
+    }
+
+    #contact .card {
+        width: 27rem;
+    }
+
+    #contact p, #contact h2 {
+        width: 80%;
+        font-size: 25px;
+    }
+
+    #contact h2 {
+        font-size: 45px;
+    }
+
+    #compendium button {
+        width: 33%;
+    }
+
+    #list button {
+        width: 15%;
+    }
+
+    .jurnal-gallery {
+        height: 150vh;
+        overflow-y: scroll;
+    }
+
+    .mobile {
+        height: 0;
+        visibility: hidden;
+    }
+
+}
+
+@media (max-width: 1199px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .logo {
+        height:45px;
+    }
+
+    #mobile-subs {
+        visibility: visible;
+        height: auto;
+    }
+
+    #mobile-subs .row{
+        width: 104%;
+    }
+
+    .hero-img {
+        height: 30vh;
+    }
+
+    .glass {
+        height: 35%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #list li {
+        width: 90%;
+    }
+
+    #list img {
+        visibility: hidden;
+        height: 0;
+    }
+
+    #contact .card {
+        width: 19rem;
+    }
+
+    .mobile-menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .deskop {
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+/* koscielec */
+
