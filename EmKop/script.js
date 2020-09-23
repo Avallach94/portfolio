@@ -163,6 +163,7 @@ function reload() {
  }
 
 resize();
+alert('You can see this website at www.emkop.pl')
 window.addEventListener('resize', resize);
 nextPht.addEventListener('click', nextPhoto);
 prevPht.addEventListener('click', prevPhoto);
