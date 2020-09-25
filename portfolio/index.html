@@ -4,70 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/560710fdbd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css">
     <title>Konrad w Internecie</title>
 </head>
-<body class="container">
+<body class="container h5">
     <header>
-        <nav>
-            <li>O mnie</li>
-            <li>Projekty</li>
-            <li>Kontakt</li>
-            <hr>
+        <nav class="d-flex justify-content-between justify-content-lg-end mt-3 mb-3">
+            <li><a href="#about" class="mr-lg-3">O mnie</a></li>
+            <li><a href="#project" class="mr-lg-3">Projekty</a></li>
+            <li><a href="#contact">Kontakt</a></li>
         </nav>
     </header>
     <main>
-        <div id="hero">
-            <h1>CZEŚĆ, JESTEM <span class="name">KONRAD</span></h1>
-            <p>W życiu ważne jest dla mnie robienie tego, co lubię. Moim hobby jest przede wszystkim tworzenie stron oraz zagadnienia związane z programowaniem. Chciałbym je na stałe wpisać także w moje życie zawodowe. Dzięki mojej wytrwałości oraz ambicji ciągle zwiększam swoje umiejętności. Interesuję się także turystyką górską oraz elektroniką (szczególnie jeśli mogę ją naprawić). Chcesz wiedzieć więcej? Skontaktuj się ze mną i porozmawiajmy przy dobrej kawie.</p>
-        </div>
-        <div id="project">
+        <section id="about" class="d-flex align-items-center mt-5 mb-5">
             <div class="row">
-                <h2>Moje prace:</h2>
-            </div>
-            <div class="row justify-content-center"">
-                <div class="card col-5">
-                    <img src="/example.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text.</p>
-                    </div>
-                </div>
-                <div class="card col-5">
-                    <img src="/example.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text.</p>
-                    </div>
-                </div>
-                <div class="card col-5">
-                    <img src="/example.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text.</p>
-                    </div>
-                </div>
-                <div class="card col-5">
-                    <img src="/example.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text.</p>
-                    </div>
+                <h1 class="display-1 mb-4 mb-xl-5">CZEŚĆ, JESTEM <span>KONRAD</span>.</h1>
+                <div class="row justify-content-xl-end">
+                    <p class="col-12 col-lg-10">W życiu ważne jest dla mnie robienie tego, co lubię. Moim hobby jest przede wszystkim tworzenie stron oraz zagadnienia związane z programowaniem. Chciałbym je na stałe wpisać także w moje życie zawodowe. Dzięki mojej wytrwałości oraz ambicji ciągle zwiększam swoje umiejętności. Interesuję się także turystyką górską oraz elektroniką (szczególnie jeśli mogę ją naprawić). Chcesz wiedzieć więcej? Skontaktuj się ze mną i porozmawiajmy przy dobrej kawie.</p>
                 </div>
             </div>
-        </div>
-        <div id="contact">
+        </section>
+        <section id="project">
             <div class="row">
-                <div class="col-12 text-center">
-                    <h2>Zainteresowany?<br><span class="contact-span">Skontaktuj się ze mną</span> przez:</h2>
+                <h2 class="h1 mb-3 mb-lg-5">Moje prace:</h2>
+            </div>
+            <div class="row justify-content-around mb-5">
+                <div class="col-11 col-lg-5 p-0 mb-1 mb-lg-4">
+                    <img src="/example.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <p>Some quick example text.</p>
+                </div>
+                <div class="col-11 col-lg-5 p-0 mb-1 mb-lg-4">
+                    <img src="/example.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <p>Some quick example text.</p>
+                </div>
+                <div class="col-11 col-lg-5 p-0 mb-1 mb-lg-4">
+                    <img src="/example.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <p>Some quick example text.</p>
+                </div>
+                <div class="col-11 col-lg-5 p-0 mb-1 mb-lg-4">
+                    <img src="/example.jpg" class="card-img-top img-thumbnail" alt="...">
+                    <p>Some quick example text.</p>
                 </div>
             </div>
-            <div class="row justify-content-center contact-icon">
-                <i class="fas fa-phone-alt m-2"></i>
-                <i class="fas fa-at m-2"></i>
-                <i class="fab fa-github m-2"></i>
+        </section>
+        <section id="contact">
+            <div class="row">
+                <div class="col-12 text-center mt-5 mb-4">
+                    <h2 class="h1">Zainteresowany?<br><span>Skontaktuj się ze mną</span> przez:</h2>
+                </div>
             </div>
-        </div>
+            <div class="row justify-content-center h1 mb-5 pb-5">
+                <i class="fas fa-phone-alt m-3"></i>
+                <i class="fas fa-at m-3"></i>
+                <i class="fab fa-github m-3"></i>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="mt-5">
+        <p class="text-center pt-3"><small>© GACEK KONRAD 2020</small></p>
+    </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

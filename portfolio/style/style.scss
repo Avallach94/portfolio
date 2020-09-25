@@ -1,12 +1,77 @@
+$grey: #2F3640;
+$font-color: #DCDDE1;
+$green: #44BD32;
+
+
+
+html, .container{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: $grey;
+    color: $font-color;
+}
+
+header {
+    border-bottom: 3px solid $font-color;
+}
+
+footer {
+    border-top: 3px solid $font-color;
+}
+
+span {
+    color: $green;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: $font-color;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: $green;
+}
+
+#about {
+    height: 100vh;
+}
+
+h1, h2 {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+h1 {
+    line-height: 0.5;
+}
+
+#about p {
+    line-height: 1.6;
+}
+
 .row {
     margin: 0;
 }
 
-#project .col-5 {
+/*#project .col-11, #project .col-lg-5, {
+   padding: 0;
+   margin: 40px 0;
+}*/
+
+#about .col-12 {
     padding: 0;
-    margin: 20px;
 }
 
-.contact-icon {
-    font-size: 3em;
-}
+@media only screen and (max-width: 767px) {
+    #about {
+        height: 110%;
+    }
+
+    #project .col-11, #project .col-lg-5 {
+        padding: 0;
+        margin: 20px 0;
+    }
+  }
+
