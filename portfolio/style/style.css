@@ -13,6 +13,7 @@ footer {
 }
 
 span {
+  display: visible;
   color: #44BD32;
 }
 
@@ -20,11 +21,11 @@ nav li {
   list-style: none;
 }
 
-nav a {
+a {
   color: #DCDDE1;
 }
 
-nav a:hover {
+a:hover {
   text-decoration: none;
   color: #44BD32;
 }
@@ -34,7 +35,7 @@ nav a:hover {
 }
 
 h1, h2 {
-  font-family: 'Hind Siliguri', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
 h1 {
