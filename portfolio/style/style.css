@@ -12,11 +12,6 @@ footer {
   border-top: 3px solid #DCDDE1;
 }
 
-span {
-  display: visible;
-  color: #44BD32;
-}
-
 nav li {
   list-style: none;
 }
@@ -39,21 +34,23 @@ h1, h2 {
 }
 
 h1 {
+  position: relative;
+  left: 10vw;
   line-height: 0.5;
+  opacity: 0;
 }
 
 #about p {
   line-height: 1.6;
+  opacity: 0;
+  position: relative;
+  left: -10vw;
 }
 
 .row {
   margin: 0;
 }
 
-/*#project .col-11, #project .col-lg-5, {
-   padding: 0;
-   margin: 40px 0;
-}*/
 #about .col-12 {
   padding: 0;
 }
