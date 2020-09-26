@@ -56,6 +56,10 @@ h1 {
 }
 
 @media only screen and (max-width: 767px) {
+  html {
+    font-size: 13px;
+  }
+
   #about {
     height: 110%;
   }
@@ -63,5 +67,10 @@ h1 {
   #project .col-11, #project .col-lg-5 {
     padding: 0;
     margin: 20px 0;
+  }
+}
+@media only screen and (max-width: 300px) {
+  html {
+    font-size: 10px;
   }
 }
