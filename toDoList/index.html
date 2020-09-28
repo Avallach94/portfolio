@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/560710fdbd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Lista zadań</title>
+</head>
+<body>
+    <main class="container">
+        <section>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNewList">
+                Dodaj nową liste.
+            </button>
+            <div class="modal fade" id="addNewList">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h5 class="modal-title">Nazwa nowej listy.</h5>
+                            <input type="text" class="form-control form-control-lg mt-3 mb-3" id="newListName">
+                            <div class="row justify-content-center">
+                                <button type="button" class="btn col-5" data-dismiss="modal">Anuluj</button>
+                                <button id="confirm" type="button" class="btn col-5" data-dismiss="modal">Zapisz</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="m-5" id="list-group">
+            
+        </section>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="script/script.js"></script>
+</html>
