@@ -18,7 +18,7 @@ $("#addNewList").on("click", "#confirm", function() {
     $('#list-group').append($newList);
 });
 
-// rename List
+// rename List 
 
 $("#list-group").on("click", ".renameList", function() {
     $oldName = $(this).parent().text();
