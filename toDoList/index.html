@@ -11,18 +11,20 @@
 <body>
     <main class="container">
         <section>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNewList">
-                Dodaj nową liste.
-            </button>
-            <div class="modal fade" id="addNewList">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <h5 class="modal-title">Nazwa nowej listy.</h5>
-                            <input type="text" class="form-control form-control-lg mt-3 mb-3" id="newListName">
-                            <div class="row justify-content-center">
-                                <button type="button" class="btn col-5" data-dismiss="modal">Anuluj</button>
-                                <button id="confirm" type="button" class="btn col-5" data-dismiss="modal">Zapisz</button>
+            <div class="row justify-content-center mt-4">
+                <button type="button" class="btn btn-outline-secondary col-3" data-toggle="modal" data-target="#addNewList">
+                    Dodaj nową liste.
+                </button>
+                <div class="modal fade" id="addNewList">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h5 class="modal-title">Nazwa nowej listy.</h5>
+                                <input type="text" class="form-control form-control-lg mt-3 mb-3" id="newListName">
+                                <div class="row justify-content-center">
+                                    <button type="button" class="btn col-5" data-dismiss="modal">Anuluj</button>
+                                    <button id="confirm" type="button" class="btn col-5" data-dismiss="modal">Zapisz</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -30,7 +32,6 @@
             </div>
         </section>
         <section class="m-5" id="list-group">
-            
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

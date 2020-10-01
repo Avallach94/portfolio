@@ -1,3 +1,66 @@
+body, .modal-content {
+  background: #606c88;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#3f4c6b), to(#606c88));
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+html, .modal-content, .task, .btn {
+  color: #fff;
+}
+
+.modal-content .btn:hover {
+  color: #fff;
+}
+
+i {
+  visibility: hidden;
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  border: 0;
+  background-color: #3f4c6b77;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #3f4c6b77;
+}
+
+.list {
+  background-color: rgba(255, 255, 255, 0.082);
+}
+
+.list:hover {
+  color: #fff;
+}
+.list:hover i {
+  visibility: visible;
+}
+
 .task {
-  background-color: red;
+  background-color: rgba(255, 255, 255, 0.066);
+  font-size: 1.2rem;
+}
+
+.task:hover {
+  color: #fff;
+}
+.task:hover i {
+  visibility: visible;
+}
+
+#newTask, #renameInput {
+  background-color: rgba(255, 255, 255, 0.066);
+  border: 0;
+}
+
+#newTaskBtn, #renameInputSuccess, #renameInputCancel {
+  border: 0;
+  background-color: #3f4c6b77;
+}
+#newTaskBtn i, #renameInputSuccess i, #renameInputCancel i {
+  visibility: visible;
 }
