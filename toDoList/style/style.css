@@ -52,9 +52,10 @@ i {
   visibility: visible;
 }
 
-#newTask, #renameInput {
+#newTask, #renameInput, #newListName {
   background-color: rgba(255, 255, 255, 0.066);
   border: 0;
+  color: #fff;
 }
 
 #newTaskBtn, #renameInputSuccess, #renameInputCancel {
@@ -63,4 +64,12 @@ i {
 }
 #newTaskBtn i, #renameInputSuccess i, #renameInputCancel i {
   visibility: visible;
+}
+
+.fa-chevron-down {
+  visibility: visible;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }

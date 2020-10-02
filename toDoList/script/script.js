@@ -6,9 +6,10 @@ $("#addNewList").on("click", "#confirm", function() {
     $newList = '<div>\
                     <a class="btn btn-block btn-lg mt-5 list" data-toggle="collapse" href="#newList'+ $index +'" role="button" aria-expanded="true">\
                         <div class="row justify-content-between">\
-                            <span class="ml-3">' + $newListName +
+                            <div class="ml-3">' + $newListName +
                             '<i class="fas fa-pencil-alt renameList ml-3"></i>\
-                            </span><i class="fas fa-trash deleteList mt-1 mr-3"></i>\
+                            </div><div><i class="fas fa-trash deleteList mt-1 mr-3"></i>\
+                            <i class="fas fa-chevron-down mt-1 mr-3"></i></div>\
                         </div>\
                     </a>\
                     <div class="collapse" id="newList'+ $index +'">\
@@ -27,7 +28,7 @@ $("#addNewList").on("click", "#confirm", function() {
 
 $("#list-group").on("click", ".renameList", function() {
     $oldName = $(this).parent().text();
-    $(this).parent().replaceWith('<row class="d-flex"><input type="text" class="form-control col-8" id="renameInput"><button class="btn" id="renameInputSuccess"><i class="fas fa-check"></i></button><button class="btn" id="renameInputCancel"><i class="fas fa-times"></i></button></row>');
+    $(this).parent().replaceWith('<row class="d-flex"><input type="text" class="form-control ml-3 col-12" id="renameInput"><button class="btn" id="renameInputSuccess"><i class="fas fa-check"></i></button><button class="btn" id="renameInputCancel"><i class="fas fa-times"></i></button></row>');
     $("#list-group").on("click", "#renameInputSuccess", function() {
         $(this).parent().replaceWith('<span class="ml-3">' + $('#renameInput').val() + '<i class="fas fa-pencil-alt renameList ml-3"></i></span>');
     });
@@ -39,7 +40,7 @@ $("#list-group").on("click", ".renameList", function() {
 // delete list
 
 $("#list-group").on("click", ".deleteList", function() {
-    $(this).parent().parent().remove();
+    $(this).parent().parent().parent().parent().remove();
 });
 
 // add Task
@@ -63,4 +64,26 @@ $("#list-group").on("click", ".deleteTask", function() {
     $(this).parent().remove();
 });
 
+// chevron Up and Down 
 
+$("#list-group").on("click", ".list", function() {
+    $selectedList = $(this).attr("href");
+    $selectedChevron = "a[href='" + $selectedList +"'] .fa-chevron-down"
+    if ($($selectedChevron).css('transform') == 'none') {
+        $($selectedChevron).css('transform', 'rotate(-180deg)');
+      } else {
+        $($selectedChevron).css('transform', '');
+      };
+});
+
+// disable mark Task
+
+$("#list-group").on("click", "input[type='checkbox']", function() {
+    if ($(this)[0].checked == true) {
+        $(this).parent().css('color', 'grey');
+        $(this).parent().css('text-decoration', 'line-through');
+    } else {
+        $(this).parent().css('color', '#fff');
+        $(this).parent().css('text-decoration', 'none');
+    };
+});
