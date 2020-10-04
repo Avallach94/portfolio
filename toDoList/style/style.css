@@ -73,3 +73,9 @@ i {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
 }
+
+@media only screen and (max-width: 720px) {
+  i {
+    visibility: visible;
+  }
+}
