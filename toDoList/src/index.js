@@ -1,9 +1,16 @@
-﻿// add List
+﻿import "bootstrap";
+import "./style.scss";
+// in a module
+$('#item'); // <= just works
+jQuery('#item'); // <= just works
+// $ is automatically set to the exports of module "jquery"
+
+// add List
 
 $("#addNewList").on("click", "#confirm", function() {
-    $newListName = $('#newListName').val();
-    $index = $('#list-group').children().length + 1;
-    $newList = '<div>\
+    var $newListName = $('#newListName').val();
+    var $index = $('#list-group').children().length + 1;
+    var $newList = '<div>\
                     <a class="btn btn-block btn-lg mt-4 mt-lg-5 list" data-toggle="collapse" href="#newList'+ $index +'" role="button" aria-expanded="true">\
                         <div class="row justify-content-between d-flex">\
                             <div class="ml-3">' + $newListName +
@@ -27,7 +34,7 @@ $("#addNewList").on("click", "#confirm", function() {
 // rename List 
 
 $("#list-group").on("click", ".renameList", function() {
-    $oldName = $(this).parent().text();
+    var $oldName = $(this).parent().text();
     $(this).parent().replaceWith('<div class="d-flex col-8"><input type="text" class="form-control" id="renameInput"><button class="btn" id="renameInputSuccess"><i class="fas fa-check"></i></button><button class="btn" id="renameInputCancel"><i class="fas fa-times"></i></button></div>');
     $("#list-group").on("click", "#renameInputSuccess", function() {
         $(this).parent().replaceWith('<span class="ml-3">' + $('#renameInput').val() + '<i class="fas fa-pencil-alt renameList ml-3"></i></span>');
@@ -46,10 +53,10 @@ $("#list-group").on("click", ".deleteList", function() {
 // add Task
 
 $("#list-group").on("click", "#newTaskBtn", function() {
-    $newTaskLocation= '#' + $(this).parent().parent().attr('id') + ' .row';
-    $inputLocation = '#' + $(this).parent().parent().attr('id') + ' #newTask';
-    $newTaskName = $($inputLocation).val();
-    $newTask = '<div class="col-10 col-lg-8 d-flex flex-row align-items-center justify-content-between mt-3 task">\
+    var $newTaskLocation= '#' + $(this).parent().parent().attr('id') + ' .row';
+    var $inputLocation = '#' + $(this).parent().parent().attr('id') + ' #newTask';
+    var $newTaskName = $($inputLocation).val();
+    var $newTask = '<div class="col-10 col-lg-8 d-flex flex-row align-items-center justify-content-between mt-3 task">\
                     <span class="d-flex flex-row align-items-center m-1">\
                         <input class="mr-3" type="checkbox">' + $newTaskName + '</span>\
                         <i class="fas fa-trash deleteTask"></i>\
@@ -67,8 +74,8 @@ $("#list-group").on("click", ".deleteTask", function() {
 // chevron Up and Down 
 
 $("#list-group").on("click", ".list", function() {
-    $selectedList = $(this).attr("href");
-    $selectedChevron = "a[href='" + $selectedList +"'] .fa-chevron-down"
+    var $selectedList = $(this).attr("href");
+    var $selectedChevron = "a[href='" + $selectedList +"'] .fa-chevron-down"
     if ($($selectedChevron).css('transform') == 'none') {
         $($selectedChevron).css('transform', 'rotate(-180deg)');
       } else {
